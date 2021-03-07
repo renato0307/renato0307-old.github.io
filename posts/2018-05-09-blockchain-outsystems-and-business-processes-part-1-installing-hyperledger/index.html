@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger | </title><meta name="Description" content=""><meta property="og:title" content="Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger" />
+<meta property="og:description" content="Reading time: [rt_reading_time] minutes.
+I&rsquo;ve been exploring how to combine Blockchain, OutSystems and Business Processes.
+Our goal is not focus on Blockchain technology only. We aim to understand what solutions we can build, the impacts in terms of business processes and how can we leverage OutSystems strengths to deliver the benefits faster.
+For that, we&rsquo;ll be using Hyperledger Fabric and Hyperledger Composer.
+Hyperledger Fabric is a permissioned distributed ledger technology platform, designed for use in enterprise contexts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-05-09T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-05-09T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger"/>
+<meta name="twitter:description" content="Reading time: [rt_reading_time] minutes.
+I&rsquo;ve been exploring how to combine Blockchain, OutSystems and Business Processes.
+Our goal is not focus on Blockchain technology only. We aim to understand what solutions we can build, the impacts in terms of business processes and how can we leverage OutSystems strengths to deliver the benefits faster.
+For that, we&rsquo;ll be using Hyperledger Fabric and Hyperledger Composer.
+Hyperledger Fabric is a permissioned distributed ledger technology platform, designed for use in enterprise contexts."/>
+<meta name="application-name" content="renato alves torres . net">
+<meta name="apple-mobile-web-app-title" content="renato alves torres . net"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/" /><link rel="prev" href="https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/" /><link rel="next" href="https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/renato0307.github.io\/posts\/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger\/"
+        },"genre": "posts","wordCount":  1340 ,
+        "url": "https:\/\/renato0307.github.io\/posts\/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger\/","datePublished": "2018-05-09T00:00:00+00:00","dateModified": "2018-05-09T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https:\/\/renato0307.github.io"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "english",
+            "item": "https://renato0307.github.io/categories/english/"
+        },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger"
+            }]
+    }
+</script></head>
+    <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+            <div class="toc-title">Contents</div>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="header-post">
+        <div class="post-title">
+
+            <div class="post-all-meta">
+            <div class="breadcrumbs">
+    <a href="/">Home </a>/ <a href="/categories/english/">english </a>/ <a href="/"> Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger </a>
+</div>
+            <h1 class="single-title animated flipInX">Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger</h1><div class="post-meta">
+                <div class="post-meta-line"><span class="post-category">
+                                <a href="/categories/english/"><i class="far fa-folder fa-fw"></i>&nbsp;english</a>&nbsp;<a href="/categories/software/"><i class="far fa-folder fa-fw"></i>&nbsp;software</a>
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2018-05-09">2018-05-09</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1340 words
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;7 minutes</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+        <article class="single toc-start">
+
+        <div class="content-block content-block-first content-block-position">
+
+        <div class="post"><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><p><em>Reading time: [rt_reading_time] minutes.</em></p>
+<p>I&rsquo;ve been exploring how to combine <a href="https://www.youtube.com/watch?v=SSo_EIwHSd4" target="_blank" rel="noopener noreffer">Blockchain</a>, <a href="https://outsystems.com" target="_blank" rel="noopener noreffer">OutSystems</a> and Business Processes.</p>
+<p>Our goal is not focus on Blockchain technology only. We aim to understand what solutions we can build, the impacts in terms of business processes and how can we leverage OutSystems strengths to deliver the benefits faster.</p>
+<p>For that, we&rsquo;ll be using <a href="https://www.hyperledger.org/projects/fabric" target="_blank" rel="noopener noreffer">Hyperledger Fabric</a> and <a href="https://www.hyperledger.org/projects/composer" target="_blank" rel="noopener noreffer">Hyperledger Composer</a>.</p>
+<p><strong>Hyperledger Fabric</strong> is a permissioned distributed ledger technology platform, designed for use in enterprise contexts.</p>
+<p>As described in the <a href="http://hyperledger-fabric.readthedocs.io/en/latest/whatis.html" target="_blank" rel="noopener noreffer">official documentation</a>:</p>
+<blockquote>
+<p>Fabric has a highly modular and configurable architecture, enabling innovation, versatility and optimization for a broad range of industry use cases including banking, finance, insurance, healthcare, human resources, supply chain and even digital music delivery.</p>
+</blockquote>
+<p>Also, it&rsquo;s open source and supported by the <a href="https://www.linuxfoundation.org/projects/" target="_blank" rel="noopener noreffer">Linux Foundation</a> and has a strong developer and <a href="https://www.hyperledger.org/resources/vendor-directory" target="_blank" rel="noopener noreffer">vendor support</a>.</p>
+<p><strong>Hyperledger Composer</strong> aims to simplify developing blockchain solutions making it easier to integrate with the existing business systems.</p>
+<p><a href="https://youtu.be/fdFUsrsv5iw?t=123" target="_blank" rel="noopener noreffer">Prototypes in several industries made the Hyperledger community realize that building blockchain solutions directly on top of Fabric would generate a lot of boilerplate code</a> related to error handling, data validation, access control and remote calls, when the focus should be solving business needs.</p>
+<p>Composer allows application developers to build solutions using common development tools with business level concepts like assets, participants and transactions.</p>
+<p>This is how those two projects fit in the Hyperledger scope:</p>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/h1.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/h1.png"
+        data-srcset="images/h1.png, images/h1.png 1.5x, images/h1.png 1.6x"
+        data-sizes="auto"
+        alt="images/h1.png"
+        title="h1.png" /></div></a></p>
+<p>In the simplest way I could remember:</p>
+<ol>
+<li>Fabric is the technical framework that will run the blockchain network</li>
+<li>Composer simplifies the development and exposes REST APIs for integration with existing systems</li>
+</ol>
+<p>This first post will <strong>start with the basics</strong>: installation of a development environment for prototyping purposes.</p>
+<p>I&rsquo;ll do a step-by-step tutorial so any person can follow it without troubles.</p>
+<p>Let&rsquo;s dive in. We will:</p>
+<ol>
+<li>Setup a Google Cloud account</li>
+<li>Create an Ubuntu Virtual Machine</li>
+<li>Install Hyperledger pre-requirements</li>
+<li>Install Hyperledger Fabric and Hyperledger Composer</li>
+<li>Deploy a Blockchain Business Network</li>
+<li>Expose the Business Network using a REST API</li>
+</ol>
+<p>I will not explain all the concepts behind Hyperledger Fabric and Hyperledger Composer. For that refer to the <a href="https://hyperledger.github.io/composer/latest/index.html" target="_blank" rel="noopener noreffer">official documentation</a>.</p>
+<h1 id="1-setup-a-google-cloud-account">1. Setup a Google Cloud account</h1>
+<p>First you need to create a <a href="https://cloud.google.com/" target="_blank" rel="noopener noreffer">Google Cloud</a> account and <a href="https://console.cloud.google.com/billing" target="_blank" rel="noopener noreffer">setup the billing</a>. Currently Google is offering an $300 credit so if you&rsquo;re trying on a personal basis, this will last a few months.</p>
+<h1 id="2-create-an-ubuntu-virtual-machine">2. Create an Ubuntu Virtual Machine</h1>
+<p>In the Google Cloud console, click &ldquo;Create and empty project&rdquo;.<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/1-1.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/1-1.png"
+        data-srcset="images/1-1.png, images/1-1.png 1.5x, images/1-1.png 1.6x"
+        data-sizes="auto"
+        alt="images/1-1.png"
+        title="1-1.png" /></div></a></p>
+<p>Give the project a name and ID.<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/2.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/2-e1526477860299.png"
+        data-srcset="images/2-e1526477860299.png, images/2-e1526477860299.png 1.5x, images/2-e1526477860299.png 1.6x"
+        data-sizes="auto"
+        alt="images/2-e1526477860299.png"
+        title="2-e1526477860299.png" /></div></a></p>
+<p>In the project dashboard, access the &ldquo;VM Instances&rdquo; page.<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/3.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/3.png"
+        data-srcset="images/3.png, images/3.png 1.5x, images/3.png 1.6x"
+        data-sizes="auto"
+        alt="images/3.png"
+        title="3.png" /></div></a></p>
+<p>Click the &ldquo;Create&rdquo; VM instance button.<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/4.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/4-e1526477879750.png"
+        data-srcset="images/4-e1526477879750.png, images/4-e1526477879750.png 1.5x, images/4-e1526477879750.png 1.6x"
+        data-sizes="auto"
+        alt="images/4-e1526477879750.png"
+        title="4-e1526477879750.png" /></div></a></p>
+<p>In the instance creation screen you need to:</p>
+<ol>
+<li>Set the name (&ldquo;hyperledger-vm&rdquo; in my case)</li>
+<li>Change the machine type (small is enough to start)</li>
+<li>Select Ubuntu as the operation system and set the storage for 30 Gb</li>
+<li>Check &ldquo;Allow HTTP traffic&rdquo;</li>
+</ol>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/5.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/5.png"
+        data-srcset="images/5.png, images/5.png 1.5x, images/5.png 1.6x"
+        data-sizes="auto"
+        alt="images/5.png"
+        title="5.png" /></div></a></p>
+<p>After a couple of minutes, your instance will be up and running:<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/6.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/6.png"
+        data-srcset="images/6.png, images/6.png 1.5x, images/6.png 1.6x"
+        data-sizes="auto"
+        alt="images/6.png"
+        title="6.png" /></div></a></p>
+<p>The Hyperledger Composer Playground and REST APIs run by default on ports 8080 and 3000 so we need to add them in the firewall rules:<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/10.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/10.png"
+        data-srcset="images/10.png, images/10.png 1.5x, images/10.png 1.6x"
+        data-sizes="auto"
+        alt="images/10.png"
+        title="10.png" /></div></a></p>
+<p>Edit the &ldquo;default-allow-http&rdquo; rule.<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/11.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/11.png"
+        data-srcset="images/11.png, images/11.png 1.5x, images/11.png 1.6x"
+        data-sizes="auto"
+        alt="images/11.png"
+        title="11.png" /></div></a></p>
+<p>And add the &ldquo;tcp:8080; tcp:3000&rdquo;. <a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/12.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/12.png"
+        data-srcset="images/12.png, images/12.png 1.5x, images/12.png 1.6x"
+        data-sizes="auto"
+        alt="images/12.png"
+        title="12.png" /></div></a></p>
+<h1 id="3-hyperledger-pre-requirements-installation">3. Hyperledger pre-requirements installation</h1>
+<p>My installation of Hyperledger pre-requirements was based on <a href="https://medium.com/google-cloud/deploy-fabcar-on-hyperledger-fabric-93c082c31b7a" target="_blank" rel="noopener noreffer">these instructions</a> with small changes.</p>
+<p>First, open a SSH terminal to the VM.<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/7.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/7.png"
+        data-srcset="images/7.png, images/7.png 1.5x, images/7.png 1.6x"
+        data-sizes="auto"
+        alt="images/7.png"
+        title="7.png" /></div></a> <a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/8.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/8.png"
+        data-srcset="images/8.png, images/8.png 1.5x, images/8.png 1.6x"
+        data-sizes="auto"
+        alt="images/8.png"
+        title="8.png" /></div></a></p>
+<p>For <strong>docker-ce</strong> execute the following commands (you can copy and paste to the SSH terminal each command using normal CTRL+C / CTRL+V):</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get install \<br>
+linux-image-extra-$(uname -r) \<br>
+linux-image-extra-virtual</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get install \<br>
+apt-transport-https \<br>
+ca-certificates \<br>
+curl \<br>
+software-properties-common</p>
+<p>curl -fsSL <a href="https://download.docker.com/linux/ubuntu/gpg" target="_blank" rel="noopener noreffer">https://download.docker.com/linux/ubuntu/gpg</a> | sudo apt-key add -</p>
+<p>sudo add-apt-repository \<br>
+&ldquo;deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" target="_blank" rel="noopener noreffer">https://download.docker.com/linux/ubuntu</a> \<br>
+$(lsb_release -cs) \<br>
+stable&rdquo;</p>
+<p>sudo apt-get update
+sudo apt-get install docker-ce
+sudo usermod -a -G docker $USER
+sudo systemctl enable docker</p>
+<p>After these commands you should be able to execute docker:</p>
+<p>docker &ndash;version</p>
+<p>Next is the installation of <strong>docker compose</strong>.</p>
+<p>sudo curl -L <a href="https://github.com/docker/compose/releases/download/1.16.1/docker-compose-%60uname" target="_blank" rel="noopener noreffer">https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname</a> -s`-`uname -m` -o /usr/local/bin/docker-compose</p>
+<p>sudo chmod +x /usr/local/bin/docker-compose</p>
+<p>If everything is OK, the following command will execute with success and print the docker-compose version.</p>
+<p>docker-compose &ndash;version</p>
+<p>For <strong>Go</strong> language all you need to do is:</p>
+<p>VERSION=1.9.1
+OS=linux
+ARCH=amd64
+sudo curl \<br>
+&ndash;location <a href="https://golang.org/dl/go$VERSION.$OS-$ARCH.tar.gz" target="_blank" rel="noopener noreffer">https://golang.org/dl/go$VERSION.$OS-$ARCH.tar.gz</a> \<br>
+&ndash;output go$VERSION.$OS-$ARCH.tar.gz</p>
+<p>sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz</p>
+<p>export PATH=$PATH:/usr/local/go/bin</p>
+<p>If everything is OK, the following command will execute with success and print the Go version.</p>
+<p>go version</p>
+<p>For the <strong>node.js</strong> installation, I&rsquo;ll use NVM (Node Version Manager), a simple bash script to manage multiple active node.js versions.</p>
+<p>To install NVM, run the following commands:</p>
+<p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh">https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh</a> | bash</p>
+<p>export NVM_DIR=&quot;$HOME/.nvm&quot;
+[ -s &ldquo;$NVM_DIR/nvm.sh&rdquo; ] &amp;&amp; \. &ldquo;$NVM_DIR/nvm.sh&rdquo; # This loads nvm
+[ -s &ldquo;$NVM_DIR/bash_completion&rdquo; ] &amp;&amp; \. &ldquo;$NVM_DIR/bash_completion&rdquo; # This loads nvm bash_completion</p>
+<p>For node.js (version 8.X) just run:</p>
+<p>nvm install 8</p>
+<p>If everything is OK the following should return &ldquo;v8.11.1&rdquo; (example).</p>
+<p>node &ndash;version</p>
+<p>To finish with the pre-requirements we need to downgrade Python, install the build tools and the unzip utility:</p>
+<p>sudo apt-get install python</p>
+<p>sudo apt-get install build-essential</p>
+<p>sudo apt-get install unzip</p>
+<h1 id="4-hyperledger-fabric-and-composer-installation">4. Hyperledger Fabric and Composer installation</h1>
+<p>The Hyperleder Fabric and Composer installations are straightforward and the <a href="https://hyperledger.github.io/composer/latest/installing/development-tools.html" target="_blank" rel="noopener noreffer">instructions from the documentation</a> work without problems.</p>
+<p>For the Fabric the commands are:</p>
+<p>mkdir ~/fabric-dev-servers &amp;&amp; cd ~/fabric-dev-servers</p>
+<p>curl -O <a href="https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz">https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz</a>
+tar -xvf fabric-dev-servers.tar.gz</p>
+<p>cd ~/fabric-dev-servers
+./downloadFabric.sh</p>
+<p>For the Composer the commands are:</p>
+<p>npm install -g composer-cli</p>
+<p>npm install -g composer-rest-server</p>
+<p>npm install -g generator-hyperledger-composer</p>
+<p>npm install -g yo</p>
+<p>npm install -g composer-playground</p>
+<p>To start Fabric:</p>
+<p>cd ~/fabric-dev-servers
+./startFabric.sh
+./createPeerAdminCard.sh</p>
+<p>To stop Fabric:</p>
+<p>~/fabric-dev-servers/stopFabric.sh</p>
+<p>To start Composer Playground:</p>
+<p>composer-playground</p>
+<p>After this you should be able to access it using the VM IP external address on port 8080:<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/13.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/13.png"
+        data-srcset="images/13.png, images/13.png 1.5x, images/13.png 1.6x"
+        data-sizes="auto"
+        alt="images/13.png"
+        title="13.png" /></div></a></p>
+<p>You can find your external IP address here:<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/14.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/14.png"
+        data-srcset="images/14.png, images/14.png 1.5x, images/14.png 1.6x"
+        data-sizes="auto"
+        alt="images/14.png"
+        title="14.png" /></div></a></p>
+<h1 id="5-deploy-a-blockchain-business-network">5. Deploy a Blockchain Business Network</h1>
+<p>For building a blockchain network you have two options:</p>
+<ol>
+<li>Develop one from scratch</li>
+<li>Use one of the samples that Hyperledger Composer can produce</li>
+</ol>
+<p>To have something quickly to do some testing, I&rsquo;ll explain only the second one.</p>
+<p>The Composer Playground can connect to blockchain networks running on a Hyperledger Fabric or simulate a network directly in the browser.</p>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/15.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/15.png"
+        data-srcset="images/15.png, images/15.png 1.5x, images/15.png 1.6x"
+        data-sizes="auto"
+        alt="images/15.png"
+        title="15.png" /></div></a></p>
+<p>This second option comes with a predefined templates that one can use to:</p>
+<ol>
+<li>Export to the file system</li>
+<li>Import to the Fabric</li>
+<li>Generate REST APIs</li>
+</ol>
+<p>For the export/import follow the next steps.</p>
+<p>First, create a new business network on the Web Browser connection:</p>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/16.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/16.png"
+        data-srcset="images/16.png, images/16.png 1.5x, images/16.png 1.6x"
+        data-sizes="auto"
+        alt="images/16.png"
+        title="16.png" /></div></a></p>
+<p>Pick one of the starter templates and click &ldquo;Deploy&rdquo;. <a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/17.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/17.png"
+        data-srcset="images/17.png, images/17.png 1.5x, images/17.png 1.6x"
+        data-sizes="auto"
+        alt="images/17.png"
+        title="17.png" /></div></a></p>
+<p>Once the network is created, connect to it and use the export option as indicated in the images below. This produces a BNA (Business Network Archive) which is essentially a zip file with all the network elements definition.</p>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/18.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/18.png"
+        data-srcset="images/18.png, images/18.png 1.5x, images/18.png 1.6x"
+        data-sizes="auto"
+        alt="images/18.png"
+        title="18.png" /></div></a> <a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/19.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/19.png"
+        data-srcset="images/19.png, images/19.png 1.5x, images/19.png 1.6x"
+        data-sizes="auto"
+        alt="images/19.png"
+        title="19.png" /></div></a></p>
+<p>The next step is to transfer this file to our Hyperledger VM. Check <a href="https://cloud.google.com/compute/docs/instances/transfer-files" target="_blank" rel="noopener noreffer">this link</a> on how to do it. Basically you need to install the Google Cloud command line tools and execute the following commands.</p>
+<p>The first one initializes the gcloud with the project settings:</p>
+<p>gcloud init</p>
+<p>The second one will make the copy using SCP (replace PATH_TO_FILE and GCLOUD_USER with the correct values for you):</p>
+<p>gcloud compute scp PATH_TO_FILE\animaltracking-network.bna GCLOUD_USER@hyperledger-vm:animaltracking-network.bna</p>
+<p>Back to the SSH shell you should be able to see something similar to the following:<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/20.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/20.png"
+        data-srcset="images/20.png, images/20.png 1.5x, images/20.png 1.6x"
+        data-sizes="auto"
+        alt="images/20.png"
+        title="20.png" /></div></a></p>
+<p>To install the network execute the following commands:</p>
+<p>cp animaltracking-network.bna fabric-dev-servers
+cd fabric-dev-servers</p>
+<p>composer network install &ndash;archiveFile animaltracking-network.bna &ndash;card PeerAdmin@hlfv1</p>
+<p>composer network start &ndash;networkName animaltracking-network &ndash;networkVersion 0.2.4-deploy.0 &ndash;card PeerAdmin@hlfv1 &ndash;networkAdmin admin &ndash;networkAdminEnrollSecret adminpw</p>
+<p>The result should be similar to:<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/21.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/21.png"
+        data-srcset="images/21.png, images/21.png 1.5x, images/21.png 1.6x"
+        data-sizes="auto"
+        alt="images/21.png"
+        title="21.png" /></div></a></p>
+<p>Next, import the generated business card:</p>
+<p>composer card import &ndash;file <a href="mailto:admin@animaltracking-network.card">admin@animaltracking-network.card</a></p>
+<h1 id="6-generating-a-rest-api">6. Generating a REST API</h1>
+<p>To expose a REST API we need the exploded BNA:</p>
+<p>mkdir animaltracking-network
+mv animaltracking-network.bna animaltracking-network/animaltracking-network.bna.zip
+cd animaltracking-network
+unzip animaltracking-network.bna.zip</p>
+<p>The result will be similar to:</p>
+<p>Archive: animaltracking-network.bna.zip
+extracting: package.json
+extracting: README.md
+extracting: permissions.acl
+creating: models/
+extracting: models/com.hyperledger.composer.animaltracking.cto
+creating: lib/
+extracting: lib/model.cto.js</p>
+<p>To start the REST server execute the following command:</p>
+<p>composer-rest-server -c admin@animaltracking-network -n never -w true</p>
+<p>You&rsquo;ll be able to browse the API accessing the VM IP external address on port 3000:<a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/22.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/22.png"
+        data-srcset="images/22.png, images/22.png 1.5x, images/22.png 1.6x"
+        data-sizes="auto"
+        alt="images/22.png"
+        title="22.png" /></div></a></p>
+<h1 id="conclusion"> Conclusion</h1>
+<p>After this long instructions we have a network deployed and exposed using a REST API.</p>
+<p>The next steps will be to connect this network to Business Processes running in OutSystems.</p>
+<hr>
+<p>Photo by <a href="https://unsplash.com/photos/l_VVd8nV3PE?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Ilze Lucero</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Unsplash</a></p>
+</div>
+
+            <div class="post"><div class="post-info-share">
+    <span></span>
+</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
+            <a class="nav-box" href="/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">Bootstrapping an OutSystems Distributed Team with SCRUM</span></div></a>
+        </div>
+        <div class="post-nav-box nav-box-next">
+            <a class="nav-box" href="/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/"><div style="padding-right: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling</span></div><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path></svg></span></a>
+        </div></div></div>
+</div>
+        </div>
+    <div id="toc-final"></div>
+    </article></div></main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://renato0307.github.io&utm_medium=footer&utm_campaign=config&utm_term=1.2.0" target="_blank" title="uBlogger 1.2.0"><i class="fas fa-pencil-alt fa-fw"></i> uBlogger</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script></body>
+</html>

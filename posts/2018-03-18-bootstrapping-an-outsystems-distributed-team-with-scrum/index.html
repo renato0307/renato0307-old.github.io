@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Bootstrapping an OutSystems Distributed Team with SCRUM | </title><meta name="Description" content=""><meta property="og:title" content="Bootstrapping an OutSystems Distributed Team with SCRUM" />
+<meta property="og:description" content="Reading time: [rt_reading_time] minutes.
+ “Embrace the unknown! That’s where learning lies! If you’re too afraid to learn, you will never get any better. This is the key to being successful at Scrum: embrace change.” ― Jeff Sutherland, The Power of Scrum
+ Its been 23 years since the presentation of the Scrum framework by Jeff Sutherland and Ken Schwaber at the OOPSLA &lsquo;95, and almost 20 years since the creation of the Agile Manifesto." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-03-18T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-03-18T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bootstrapping an OutSystems Distributed Team with SCRUM"/>
+<meta name="twitter:description" content="Reading time: [rt_reading_time] minutes.
+ “Embrace the unknown! That’s where learning lies! If you’re too afraid to learn, you will never get any better. This is the key to being successful at Scrum: embrace change.” ― Jeff Sutherland, The Power of Scrum
+ Its been 23 years since the presentation of the Scrum framework by Jeff Sutherland and Ken Schwaber at the OOPSLA &lsquo;95, and almost 20 years since the creation of the Agile Manifesto."/>
+<meta name="application-name" content="renato alves torres . net">
+<meta name="apple-mobile-web-app-title" content="renato alves torres . net"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/" /><link rel="prev" href="https://renato0307.github.io/posts/2018-02-03-learning-from-the-outsystems-forum-series/" /><link rel="next" href="https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Bootstrapping an OutSystems Distributed Team with SCRUM",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/renato0307.github.io\/posts\/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum\/"
+        },"genre": "posts","wordCount":  1348 ,
+        "url": "https:\/\/renato0307.github.io\/posts\/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum\/","datePublished": "2018-03-18T00:00:00+00:00","dateModified": "2018-03-18T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https:\/\/renato0307.github.io"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "english",
+            "item": "https://renato0307.github.io/categories/english/"
+        },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Bootstrapping an OutSystems Distributed Team with SCRUM"
+            }]
+    }
+</script></head>
+    <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+            <div class="toc-title">Contents</div>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="header-post">
+        <div class="post-title">
+
+            <div class="post-all-meta">
+            <div class="breadcrumbs">
+    <a href="/">Home </a>/ <a href="/categories/english/">english </a>/ <a href="/"> Bootstrapping an OutSystems Distributed Team with SCRUM </a>
+</div>
+            <h1 class="single-title animated flipInX">Bootstrapping an OutSystems Distributed Team with SCRUM</h1><div class="post-meta">
+                <div class="post-meta-line"><span class="post-category">
+                                <a href="/categories/english/"><i class="far fa-folder fa-fw"></i>&nbsp;english</a>&nbsp;<a href="/categories/software/"><i class="far fa-folder fa-fw"></i>&nbsp;software</a>
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2018-03-18">2018-03-18</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1348 words
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;7 minutes</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+        <article class="single toc-start">
+
+        <div class="content-block content-block-first content-block-position">
+
+        <div class="post"><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><p><em>Reading time: [rt_reading_time] minutes.</em></p>
+<blockquote>
+<p>“Embrace the unknown! That’s where learning lies! If you’re too afraid to learn, you will never get any better. This is the key to being successful at Scrum: embrace change.” ― <a href="https://www.goodreads.com/author/show/2290725.Jeff_Sutherland" target="_blank" rel="noopener noreffer">Jeff Sutherland</a>, <a href="https://www.goodreads.com/work/quotes/18254398" target="_blank" rel="noopener noreffer">The Power of Scrum</a></p>
+</blockquote>
+<p>Its been 23 years since the presentation of the Scrum framework by Jeff Sutherland and Ken Schwaber at the OOPSLA &lsquo;95, and almost 20 years since the creation of the <a href="http://agilemanifesto.org/" target="_blank" rel="noopener noreffer">Agile Manifesto</a>. In those two decades, according to a 2017 Scrum Alliance report, Scrum became the most used agile methodology, with more than 45% of usage time in North America, Europe, Australia and Asia.</p>
+<p>My experience with Scrum started in 2010, with a project team of four Java programmers and two BPMS/BRMS developers. At the end of 2016, our initial group was a lot bigger, around eight Scrum teams, supporting critical systems and developing new projects, with a complex organizational context, dependencies of &ldquo;waterfall teams&rdquo;, and corporate procedures.</p>
+<p>Today I have a completely different challenge.</p>
+<p>My team:</p>
+<ol>
+<li>Is distributed in three cities/countries: Lisbon (Portugal), Rotterdam (Netherlands) and Kuwait City (Kuwait);</li>
+<li>Is multidisciplinary, with a Team Leader, Developers, and a UI/UX expert;</li>
+<li>Has different degrees of knowledge and experience of OutSystems, from Experts to just certified Associates;</li>
+<li>Has different experiences of Scrum usage (some had no experience at all).</li>
+</ol>
+<p>This is the story of our first two months and I&rsquo;ll:</p>
+<ol>
+<li>Give a brief introduction to Scrum;</li>
+<li>Explain how we apply the Scrum roles, artifacts and events;</li>
+<li>Detail the tools that support us.</li>
+</ol>
+<hr>
+<h1 id="scrum-in-60-seconds">Scrum in 60 Seconds</h1>
+<p>For newcomers to Scrum, I always recommend to read the <a href="http://scrumprimer.org/" target="_blank" rel="noopener noreffer">Scrum Primer</a> but to give context to the rest of the article, I&rsquo;ll do a &ldquo;quick-and-dirty&rdquo; introduction.</p>
+<p>As described in the Primer:</p>
+<blockquote>
+<p><em>Scrum packages</em> proven <em>product-development concepts in a simple framework,</em> including: <em>real teams, cross-functional teams, self-managing teams,</em> <em>short iterative full-cycle feedback loops, and lowering the cost of change. These concepts increase agility and feedback, enable earlier ROI, and reduce risk.</em></p>
+</blockquote>
+<p>From a &ldquo;static perspective&rdquo;, Scrum contains Roles, Artifacts, and Events:</p>
+<ul>
+<li><strong>Roles</strong> - Product Owner, Scrum Master, and the Team</li>
+<li><strong>Artifacts</strong> - Product Backlog, Sprint Backlog, Sprint Board, and the Sprint Burndown Chart</li>
+<li><strong>Events</strong> - Sprint Planning, Daily Scrum, Sprint Review, Retrospective, and the Backlog Refinement (or Grooming)</li>
+</ul>
+<p>[caption id=&quot;&quot; align=&ldquo;aligncenter&rdquo; width=&ldquo;832&rdquo;]<a href="http://scrumprimer.org/overview/en_overview.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/en_overview.png"
+        data-srcset="images/en_overview.png, images/en_overview.png 1.5x, images/en_overview.png 1.6x"
+        data-sizes="auto"
+        alt="Scrum Overview"
+        title="en_overview.png" /></div></a> Scrum Dynamic Model[/caption]</p>
+<p>From a dynamic perspective:</p>
+<ol>
+<li>All Scrum rules are enforced by the <strong>Scrum Master</strong>.</li>
+<li>It starts with the creation of the <strong>Product Backlog</strong> by the <strong>Product Owner</strong>, which contains a list of customer-centric features or user stories, prioritized by ROI (Return On Investment).</li>
+<li>The development is done in <strong>Sprints</strong>, which typically lasts from one to four weeks.</li>
+<li>In the first day of the Sprint, the Product Owner, the Team, and the Scrum Master meet to execute the <strong>Sprint Planning</strong>, a two-part session where the &ldquo;what&rdquo; and &ldquo;how&rdquo; will be defined for the Sprint.</li>
+<li>At the end of the Sprint Planning, the Team has prepared the list of work to be done. This list is called <strong>Sprint Backlog</strong> and represents the forecast regarding the goals to be attained.</li>
+<li>Once the Sprint starts, the Team meets every day for the <strong>Daily Scrum</strong>. This meeting usually is done standup and <em>&ldquo;each member reports to the other members of the team: (1) What has been accomplished since the last meeting?; (2) What will be done before the next meeting? and (3) What obstacles are in the way?&quot;</em>.</li>
+<li>During the Sprint, the Team uses the <strong>Sprint Board</strong> to represent the status of each work item (to do, in progress, and done) and the <strong>Sprint Burndown Chart</strong> to track the amount of work done versus the forecasted.</li>
+<li>During the Sprint, the Team and the Product Owner reserve around 10% of the time for <strong>Product Backlog Refinement</strong>, splitting big items into smaller ones, analyze items, re-estimate, and re-prioritize, to facilitate the preparation of future Sprints.</li>
+<li>At the end of the Sprint, two meetings focused on inspection and adaption take place: the <strong>Sprint Review</strong> (functionality) and the <strong>Retrospective</strong> (process and environment).</li>
+<li>In the <strong>Sprint Review</strong>, the Team and Product Owner present the result of the Sprint to all the relevant stakeholders, usually in the form of a working demo. All the participants are free to ask questions and give input.</li>
+<li>In the <strong>Retrospective</strong>, the Team discusses what’s working and what’s not working, and agree on changes to try. The goal is to deal with problems throughout every Sprint and not only at the end of the project.</li>
+</ol>
+<hr>
+<h1 id="how-do-we-apply-scrum">How do we apply Scrum?</h1>
+<p>Our team is building an OutSystems accelerator to support Business Process Management (BPM), which provides additional advanced capabilities not available out-of-the-box in the #1 low code platform.</p>
+<p>We are doing it by running a self-managed team.</p>
+<p>Two persons of our team have more than a decade of experience in BPM, so they do the <strong>Product Owner</strong> role, dividing the responsibility to manage the Product Backlog and decide the priorities, based on feedback from partners and customers.</p>
+<p>I assume the role of <strong>Scrum Master</strong>, accumulated with other responsibilities.</p>
+<p>Our <strong>Team</strong> has a OutSystems Team Leader  and Developers, and UI/UX expert.</p>
+<p>We are currently using one week Sprints, and our events are organized the following way:</p>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/03/work_week.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/work_week.png"
+        data-srcset="images/work_week.png, images/work_week.png 1.5x, images/work_week.png 1.6x"
+        data-sizes="auto"
+        alt="images/work_week.png"
+        title="work_week.png" /></div></a></p>
+<h4 id="sprint-planning">Sprint Planning</h4>
+<p>Due to the time differences we opted to do the planning of a new sprint in the end of the week. This allow for the team members of Kuwait to start on monday with everything ready.</p>
+<p>We explain the stories to all team members, review the estimations and discuss the implementation approach if needed.</p>
+<h4 id="daily-scrums">Daily Scrums</h4>
+<p>Occurs every day - 7 a.m. in Lisbon, 8 a.m. in Rotterdam and 10 a.m. in Kuwait.</p>
+<p>We use video conference tools, with the Scrum Master sharing a screen with the Sprint Board and the Sprint Burndown Chart.</p>
+<p>We answer the three &ldquo;magic&rdquo; questions I mentioned before. It&rsquo;s not standup but it finishes under 15 minutes.</p>
+<h4 id="backlog-refinement--grooming">Backlog Refinement / Grooming</h4>
+<p>Occurs once a week. We gatter the Team Leader, the Product Owners and the UI/UX expert over a video call to split stories, detail functional requirements and prioritize the backlog items.</p>
+<p>We always try to balance new functionalities vs. bugs vs. technical debt as one way to avoid our practice to become <a href="https://www.outsystems.com/blog/agile-versus-fragile-handle-scrum-care.html" target="_blank" rel="noopener noreffer">frAgile</a>.</p>
+<p>If stories need to detailed further, we divide them between the Team. This approach increases ownership of the stories and the product, increases the knowledge, and allow developers to learn more about the full intent of the functionality.</p>
+<h4 id="retrospective">Retrospective</h4>
+<p>Occurs once a week, ideally before the Sprint Planning.</p>
+<p>Each team member takes one or two items that we&rsquo;ve done well and one or two that we should improve. We discuss and choose one or two topics for improvement in the following week.</p>
+<hr>
+<p>Regarding the Artifacts, we use the Product Backlog, the Sprint Backlog, Sprint Board, and the Sprint Burndown Chart.</p>
+<h4 id="product-backlog-and-sprint-backlog">Product Backlog and Sprint Backlog</h4>
+<p>Our Product Backlog and Sprint Backlogs contain four types of items:</p>
+<ul>
+<li><strong>Epics</strong> - High level functionalities or requirements that need to be split into menegeable size stories;</li>
+<li><strong>Stories</strong> - Functionalities that are useful, testable and atomic;</li>
+<li><strong>Bugs</strong> -  Stuff that needs to be fixed;</li>
+<li><strong>Task</strong> - Work not related to OutSystems development  like UI/UX, infrastruture or the preparation of presentations.</li>
+</ul>
+<h4 id="estimation">Estimation</h4>
+<p>We estimate Stories, Bugs and Tasks using Story points and the Fibonachi sequence.</p>
+<p>Items with more than 13 story points are considered too big and usually need to be splited.</p>
+<p>Each team member estimates all the items for discussion in the Sprint Planning.</p>
+<p>To facilitate this process we use a simple spreadsheet with the most important components in OutSystems:</p>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/03/estimations-1.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/estimations-1.png"
+        data-srcset="images/estimations-1.png, images/estimations-1.png 1.5x, images/estimations-1.png 1.6x"
+        data-sizes="auto"
+        alt="images/estimations-1.png"
+        title="estimations-1.png" /></div></a></p>
+<h4 id="sprint-board-and-burndown-chart">Sprint Board and Burndown Chart</h4>
+<p>Our Sprint Board has five columns:</p>
+<ol>
+<li><strong>To Do</strong> - work not started</li>
+<li><strong>In Progress</strong> - work being done</li>
+<li><strong>Ready for Review</strong> - work already done but needs review (for example, Associate developers work is reviewed more frequently before it is considered done)</li>
+<li><strong>On Hold</strong> - items that need to be parked for some reason</li>
+<li><strong>Done</strong> - item is developed and tested</li>
+</ol>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/03/sprint_board.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/sprint_board.png"
+        data-srcset="images/sprint_board.png, images/sprint_board.png 1.5x, images/sprint_board.png 1.6x"
+        data-sizes="auto"
+        alt="images/sprint_board.png"
+        title="sprint_board.png" /></div></a></p>
+<h1 id="the-tools">The tools</h1>
+<p>The list of tools we use to manage our work is:</p>
+<ol>
+<li>Confluence</li>
+<li>Draw.io</li>
+<li>Jira</li>
+<li>Skype</li>
+<li>Slack</li>
+</ol>
+<h1 id="is-this-the-end">Is this the end?</h1>
+<p> </p>
+<p> </p>
+<p> </p>
+<hr>
+<p>Photo by <a href="https://unsplash.com/photos/ft7vJxwl2RY" target="_blank" rel="noopener noreffer">Olga Guryanova</a> on <a href="https://unsplash.com" target="_blank" rel="noopener noreffer">Unsplash.</a></p>
+</div>
+
+            <div class="post"><div class="post-info-share">
+    <span></span>
+</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
+            <a class="nav-box" href="/posts/2018-02-03-learning-from-the-outsystems-forum-series/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">Learning from the OutSystems Forum Series</span></div></a>
+        </div>
+        <div class="post-nav-box nav-box-next">
+            <a class="nav-box" href="/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/"><div style="padding-right: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger</span></div><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path></svg></span></a>
+        </div></div></div>
+</div>
+        </div>
+    <div id="toc-final"></div>
+    </article></div></main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://renato0307.github.io&utm_medium=footer&utm_campaign=config&utm_term=1.2.0" target="_blank" title="uBlogger 1.2.0"><i class="fas fa-pencil-alt fa-fw"></i> uBlogger</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script></body>
+</html>

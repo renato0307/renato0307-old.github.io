@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling | </title><meta name="Description" content=""><meta property="og:title" content="Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling" />
+<meta property="og:description" content="Reading time: [rt_reading_time] minutes.
+After having Hyperledger Fabric and Hyperledger Composer up and running, we&rsquo;re interested in the integration with OutSystems, more specifically with Business Processes running in OutSystems.
+Blockchain is going to be critical for the processes in the future, not only because it can bring big gains in efficiency with the simplification of the business networks (removing mans in the middle, for example). It will create the ability to track each step of common processes used by the ecosystem, so that parties can understand and track how data flows." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-05-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-05-15T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling"/>
+<meta name="twitter:description" content="Reading time: [rt_reading_time] minutes.
+After having Hyperledger Fabric and Hyperledger Composer up and running, we&rsquo;re interested in the integration with OutSystems, more specifically with Business Processes running in OutSystems.
+Blockchain is going to be critical for the processes in the future, not only because it can bring big gains in efficiency with the simplification of the business networks (removing mans in the middle, for example). It will create the ability to track each step of common processes used by the ecosystem, so that parties can understand and track how data flows."/>
+<meta name="application-name" content="renato alves torres . net">
+<meta name="apple-mobile-web-app-title" content="renato alves torres . net"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/" /><link rel="prev" href="https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/" /><link rel="next" href="https://renato0307.github.io/posts/2020-03-15-ficaemcasa-dia-0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/renato0307.github.io\/posts\/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling\/"
+        },"genre": "posts","wordCount":  498 ,
+        "url": "https:\/\/renato0307.github.io\/posts\/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling\/","datePublished": "2018-05-15T00:00:00+00:00","dateModified": "2018-05-15T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https:\/\/renato0307.github.io"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "english",
+            "item": "https://renato0307.github.io/categories/english/"
+        },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling"
+            }]
+    }
+</script></head>
+    <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+            <div class="toc-title">Contents</div>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="header-post">
+        <div class="post-title">
+
+            <div class="post-all-meta">
+            <div class="breadcrumbs">
+    <a href="/">Home </a>/ <a href="/categories/english/">english </a>/ <a href="/"> Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling </a>
+</div>
+            <h1 class="single-title animated flipInX">Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling</h1><div class="post-meta">
+                <div class="post-meta-line"><span class="post-category">
+                                <a href="/categories/english/"><i class="far fa-folder fa-fw"></i>&nbsp;english</a>&nbsp;<a href="/categories/software/"><i class="far fa-folder fa-fw"></i>&nbsp;software</a>
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2018-05-15">2018-05-15</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;498 words
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;3 minutes</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+        <article class="single toc-start">
+
+        <div class="content-block content-block-first content-block-position">
+
+        <div class="post"><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><p><em>Reading time: [rt_reading_time] minutes.</em></p>
+<p>After having Hyperledger Fabric and Hyperledger Composer <a href="https://renatoalvestorres.net/blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/" target="_blank" rel="noopener noreffer">up and running</a>, we&rsquo;re interested in the integration with OutSystems, more specifically with <a href="https://success.outsystems.com/Documentation/10/Developing_an_Application/Use_Processes" target="_blank" rel="noopener noreffer">Business Processes running in OutSystems</a>.</p>
+<p>Blockchain is going to be critical for the processes in the future, not only because it can bring big gains in efficiency with the simplification of the business networks (removing mans in the middle, for example). It will create the ability to track each step of common processes used by the ecosystem, so that parties can understand and track how data flows.</p>
+<p>While blockchain will act as the backbone of a <strong>shared process</strong>, the participants still have their own private processes in the end.</p>
+<p>
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/diagram-blockchain.jpg"
+        data-srcset="images/diagram-blockchain.jpg, images/diagram-blockchain.jpg 1.5x, images/diagram-blockchain.jpg 1.6x"
+        data-sizes="auto"
+        alt="images/diagram-blockchain.jpg"
+        title="diagram-blockchain.jpg" /></div></p>
+<p>Those private processes can interact with the business network for multiple reasons:</p>
+<ol>
+<li>Execute blockchain transactions using automatic activities</li>
+<li>Update blockchain assets or participants on activity or process completion</li>
+<li>Replicate data from the blockchain for offline usage</li>
+<li>Update process data on blockchain network event</li>
+<li>Create a process instance on blockchain network event</li>
+<li>Complete an activity or process on blockchain network event</li>
+</ol>
+<p>With Hyperledger Composer exposing the REST API for <a href="https://hyperledger.github.io/composer/latest/reference/cto_language.html" target="_blank" rel="noopener noreffer">assets, participants and transactions</a>, points 1 to 3 can be easily handled (check <a href="https://www.outsystems.com/blog/posts/building-blockchain-enabled-app/" target="_blank" rel="noopener noreffer">this article</a> on using this API).</p>
+<p>The event handling brings some additional complexity with its asynchronous behavior. Hyperledger Composer supports business network events <a href="https://hyperledger.github.io/composer/latest/business-network/publishing-events.html" target="_blank" rel="noopener noreffer">publishing</a> and <a href="https://hyperledger.github.io/composer/latest/applications/subscribing-to-events" target="_blank" rel="noopener noreffer">subscribing</a> using the NodeJS API or web sockets.</p>
+<p>So we&rsquo;ll need to:</p>
+<ol>
+<li>Subscribe to the events and route them for processing with OutSystems</li>
+<li>Execute the correct processing logic inside OutSystems</li>
+</ol>
+<p>For our prototype we will be using a NodeJS standalone application that subscribes to events using web sockets. On a message received, it calls an OutSystems REST API for event handling.</p>
+<p>We named this component <strong>Blockchain Event Agent</strong>.</p>
+<p>A code sample to achieve this is:</p>
+<p>[cc lang=&ldquo;javascript&rdquo;] const WebSocket = require(&lsquo;ws&rsquo;); const ws = new WebSocket(&lsquo;ws://35.229.89.113:3000&rsquo;);</p>
+<p>ws.on(&lsquo;message&rsquo;, function incoming(data) { console.log(data); // Call OutSystems REST API HERE }) [/cc]</p>
+<p> </p>
+<p>The solution to process the events received by the OutSystems REST API must:</p>
+<ol>
+<li>Support different logic per event, with the <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank" rel="noopener noreffer">Single Responsibility Principle</a> in mind</li>
+<li>Execute independent actions per event (if the same event impacts different processes, for example)</li>
+<li>Handle a large number of events</li>
+</ol>
+<p>We&rsquo;ve based our implementation in the <a href="https://success.outsystems.com/Documentation/10/Developing_an_Application/Use_Processes/Design_Scalable_Database_Queueing_Using_Light_Processes" target="_blank" rel="noopener noreffer">Light Processes</a> feature of OutSystems, designed to support the execution of thousands of technical processes simultaneously.</p>
+<p>In a nutshell:</p>
+<ol>
+<li>The REST API calls a service layer that will write each type of event in a separate database table</li>
+<li>For each event handling requirement, develop a lightweight BPT that is triggered when an entity entry creation occurs</li>
+<li>The lightweight BPT executes the specific action for the event processing (create a process, close an activity, update an entity, etc.)</li>
+</ol>
+<p>This component is the <strong>Blockchain Event Bridge</strong>.</p>
+<p>The following image shows the end-to-end architecture:</p>
+<p><a href="https://renatoalvestorres.net/wp-content/uploads/2018/05/Architecture-for-Blockain-Event-Handling3-3.png" target="_blank" rel="noopener noreffer">
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/Architecture-for-Blockain-Event-Handling3-3.png"
+        data-srcset="images/Architecture-for-Blockain-Event-Handling3-3.png, images/Architecture-for-Blockain-Event-Handling3-3.png 1.5x, images/Architecture-for-Blockain-Event-Handling3-3.png 1.6x"
+        data-sizes="auto"
+        alt="images/Architecture-for-Blockain-Event-Handling3-3.png"
+        title="Architecture-for-Blockain-Event-Handling3-3.png" /></div></a></p>
+<p>With this, our next step will be to setup a production like infrastructure to tune up security, fail-over, and redundancy so we can have a ready to deploy solution.</p>
+<p>Stay tuned!</p>
+<hr>
+<p>Cover photo by <a href="https://unsplash.com/photos/F9o7u-CnDJk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Tony Webster</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Unsplash</a>.</p>
+</div>
+
+            <div class="post"><div class="post-info-share">
+    <span></span>
+</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
+            <a class="nav-box" href="/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger</span></div></a>
+        </div>
+        <div class="post-nav-box nav-box-next">
+            <a class="nav-box" href="/posts/2020-03-15-ficaemcasa-dia-0/"><div style="padding-right: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">#FicaEmCasa dia 0</span></div><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path></svg></span></a>
+        </div></div></div>
+</div>
+        </div>
+    <div id="toc-final"></div>
+    </article></div></main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://renato0307.github.io&utm_medium=footer&utm_campaign=config&utm_term=1.2.0" target="_blank" title="uBlogger 1.2.0"><i class="fas fa-pencil-alt fa-fw"></i> uBlogger</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script></body>
+</html>

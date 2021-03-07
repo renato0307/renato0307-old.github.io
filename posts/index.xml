@@ -1,0 +1,114 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - renato alves torres . net</title>
+        <link>https://renato0307.github.io/posts/</link>
+        <description>All Posts | renato alves torres . net</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch Linux Installation Commands</title>
+    <link>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</link>
+    <pubDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</guid>
+    <description><![CDATA[I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
+I&rsquo;ll do that by doing an installation using VirtualBox.
+It took me eight attempts to stabilize the script below.
+Download ISO, e.g., from https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01.
+Create an image and activate EFI in the motherboard settings.
+ 
+Start the virtual machine and follow the instructions.
+The following instructions assume Portugal as the target locale.
+Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:]]></description>
+</item><item>
+    <title>How to install Elixir on Linux Mint 20</title>
+    <link>https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/</link>
+    <pubDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/</guid>
+    <description><![CDATA[Since last weekend I&rsquo;m using Linux Mint 20 instead of Windows 10. Today, I tried to install Elixir using the Ubuntu instructions using apt get, without success.
+So I went with the package approach:
+ Direct download from Erlang Solutions (link) Installation of the deb files using the software manager  In details, download Erlang and Elixir for Ubuntu Focal (20.04) which is the version used by Linux Mint 20.]]></description>
+</item><item>
+    <title>Improving &#34;slow internet&#34;</title>
+    <link>https://renato0307.github.io/posts/2020-12-18-improving-slow-internet/</link>
+    <pubDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-12-18-improving-slow-internet/</guid>
+    <description><![CDATA[I’ve just moved to Linux Mint 20 from Windows 10, as mentioned before.
+One of the things I felt was worse was the time internet pages were taking to load or “establishing connection…”.
+It is a very strange problem and hard for me to debug.
+Found a YouTube video explaining how to use OpenDNS to improve internet connection, so I decided to give it a try.
+The steps are:
+ Go to opendns.]]></description>
+</item><item>
+    <title>#FicaEmCasa dia 3</title>
+    <link>https://renato0307.github.io/posts/2020-03-18-ficaemcasa-dia-3/</link>
+    <pubDate>Wed, 18 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-03-18-ficaemcasa-dia-3/</guid>
+    <description><![CDATA[Hoje assim que cheguei ao computador, ainda antes de começar a trabalhar, olhei para o teclado e pensei: &ldquo;devia limpar isto&rdquo;.
+Tirar as teclas todas. Limpar o interior com um pequeno pincel. Limpar as teclas uma por uma (a Inês ainda me ajudou). Montar tudo.
+ 
+ 
+O dia da Inês começou com o daily meeting escolar, hoje na cozinha pois foi dia de limpeza da casa. Alterámos o processo, ao invés de lhe imprimir o material enviado pela professora, encaminhei tudo por e-mail e ela consultou diretamente no computador.]]></description>
+</item><item>
+    <title>#FicaEmCasa dia 2</title>
+    <link>https://renato0307.github.io/posts/2020-03-17-ficaemcasa-dia-2/</link>
+    <pubDate>Tue, 17 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-03-17-ficaemcasa-dia-2/</guid>
+    <description><![CDATA[O dia começou com uma ida à compras para abastecer. A mercearia Jerónimo abre às 8h. Confirmei que não havia ninguém à porta (vê-se a entrada da minha casa) e lá fui.
+&ldquo;Pai, não te demores&rdquo;.
+&ldquo;Não filha. Preparo-te o pequeno-almoço, vês uns desenho animados ao mesmo tempo, antes de terminares de comer eu já estou de volta&rdquo;.
+Cheguei à porta e havia um sinal: &ldquo;Máximo 3 pessoas&rdquo;. Ainda esperei uns 10 minutos para entrar.]]></description>
+</item><item>
+    <title>#FicaEmCasa dia 1</title>
+    <link>https://renato0307.github.io/posts/2020-03-16-ficaemcasa-dia-1/</link>
+    <pubDate>Mon, 16 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-03-16-ficaemcasa-dia-1/</guid>
+    <description><![CDATA[Primeiro dia, começou dentro dos horários normais, neste caso com uma parceira de escritório. Eu fiquei na standup-desk, a minha filha na secretária.
+Ter companhia foi bastante bom mas no inicio do dia for necessário alinhar algumas regras para garantir que ambos nos poderíamos concentrar nas tarefas em mãos.
+ 
+Ainda a manhã não tinha começado e já tínhamos o primeiro contratempo: a Escola Virtual em baixo, certamente pelo excesso de utilizadores devido a esta situação pouco normal.]]></description>
+</item><item>
+    <title>#FicaEmCasa dia 0</title>
+    <link>https://renato0307.github.io/posts/2020-03-15-ficaemcasa-dia-0/</link>
+    <pubDate>Sun, 15 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-03-15-ficaemcasa-dia-0/</guid>
+    <description><![CDATA[O Coronavirus é uma bela %$@#!
+Mas não há volta a dar. Bateu-nos à porta.
+É inevitável para mim não começar a pensar nos benefícios desta situação. Como alguém dizia:
+ We don’t get to choose what happens to us—but we always get to choose how we react to it
+ Com o encerramento das escolas, uma das vantagens desta situação preocupante é que vou passar muito mais tempo com a minha filha de 9 anos.]]></description>
+</item><item>
+    <title>Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling</title>
+    <link>https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/</link>
+    <pubDate>Tue, 15 May 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+After having Hyperledger Fabric and Hyperledger Composer up and running, we&rsquo;re interested in the integration with OutSystems, more specifically with Business Processes running in OutSystems.
+Blockchain is going to be critical for the processes in the future, not only because it can bring big gains in efficiency with the simplification of the business networks (removing mans in the middle, for example). It will create the ability to track each step of common processes used by the ecosystem, so that parties can understand and track how data flows.]]></description>
+</item><item>
+    <title>Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger</title>
+    <link>https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/</link>
+    <pubDate>Wed, 09 May 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+I&rsquo;ve been exploring how to combine Blockchain, OutSystems and Business Processes.
+Our goal is not focus on Blockchain technology only. We aim to understand what solutions we can build, the impacts in terms of business processes and how can we leverage OutSystems strengths to deliver the benefits faster.
+For that, we&rsquo;ll be using Hyperledger Fabric and Hyperledger Composer.
+Hyperledger Fabric is a permissioned distributed ledger technology platform, designed for use in enterprise contexts.]]></description>
+</item><item>
+    <title>Bootstrapping an OutSystems Distributed Team with SCRUM</title>
+    <link>https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/</link>
+    <pubDate>Sun, 18 Mar 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+ “Embrace the unknown! That’s where learning lies! If you’re too afraid to learn, you will never get any better. This is the key to being successful at Scrum: embrace change.” ― Jeff Sutherland, The Power of Scrum
+ Its been 23 years since the presentation of the Scrum framework by Jeff Sutherland and Ken Schwaber at the OOPSLA &lsquo;95, and almost 20 years since the creation of the Agile Manifesto.]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>elixir - Tag - renato alves torres . net</title>
+        <link>https://renato0307.github.io/tags/elixir/</link>
+        <description>elixir - Tag - renato alves torres . net</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/tags/elixir/" rel="self" type="application/rss+xml" /><item>
+    <title>How to install Elixir on Linux Mint 20</title>
+    <link>https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/</link>
+    <pubDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/</guid>
+    <description><![CDATA[Since last weekend I&rsquo;m using Linux Mint 20 instead of Windows 10. Today, I tried to install Elixir using the Ubuntu instructions using apt get, without success.
+So I went with the package approach:
+ Direct download from Erlang Solutions (link) Installation of the deb files using the software manager  In details, download Erlang and Elixir for Ubuntu Focal (20.04) which is the version used by Linux Mint 20.]]></description>
+</item></channel>
+</rss>

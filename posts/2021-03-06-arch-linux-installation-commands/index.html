@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Arch Linux Installation Commands | </title><meta name="Description" content=""><meta property="og:title" content="Arch Linux Installation Commands" />
+<meta property="og:description" content="I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
+I&rsquo;ll do that by doing an installation using VirtualBox.
+It took me eight attempts to stabilize the script below.
+Download ISO, e.g., from https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01.
+Create an image and activate EFI in the motherboard settings.
+ 
+Start the virtual machine and follow the instructions.
+The following instructions assume Portugal as the target locale.
+Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-06T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-06T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Arch Linux Installation Commands"/>
+<meta name="twitter:description" content="I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
+I&rsquo;ll do that by doing an installation using VirtualBox.
+It took me eight attempts to stabilize the script below.
+Download ISO, e.g., from https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01.
+Create an image and activate EFI in the motherboard settings.
+ 
+Start the virtual machine and follow the instructions.
+The following instructions assume Portugal as the target locale.
+Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:"/>
+<meta name="application-name" content="renato alves torres . net">
+<meta name="apple-mobile-web-app-title" content="renato alves torres . net"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/" /><link rel="prev" href="https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Arch Linux Installation Commands",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/"
+        },"genre": "posts","wordCount":  290 ,
+        "url": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/","datePublished": "2021-03-06T00:00:00+00:00","dateModified": "2021-03-06T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https:\/\/renato0307.github.io"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "english",
+            "item": "https://renato0307.github.io/categories/english/"
+        },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Arch Linux Installation Commands"
+            }]
+    }
+</script></head>
+    <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="renato alves torres . net" class="header-logo">renato alves torres . net</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+            <div class="toc-title">Contents</div>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="header-post">
+        <div class="post-title">
+
+            <div class="post-all-meta">
+            <div class="breadcrumbs">
+    <a href="/">Home </a>/ <a href="/categories/english/">english </a>/ <a href="/"> Arch Linux Installation Commands </a>
+</div>
+            <h1 class="single-title animated flipInX">Arch Linux Installation Commands</h1><div class="post-meta">
+                <div class="post-meta-line"><span class="post-category">
+                                <a href="/categories/english/"><i class="far fa-folder fa-fw"></i>&nbsp;english</a>&nbsp;<a href="/categories/software/"><i class="far fa-folder fa-fw"></i>&nbsp;software</a>
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-03-06">2021-03-06</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;290 words
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;2 minutes</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+        <article class="single toc-start">
+
+        <div class="content-block content-block-first content-block-position">
+
+        <div class="post"><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><p>I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.</p>
+<p>I&rsquo;ll do that by doing an installation using VirtualBox.</p>
+<p>It took me eight attempts to stabilize the script below.</p>
+<p>Download ISO, e.g., from <a href="https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01" target="_blank" rel="noopener noreffer">https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01</a>.</p>
+<p>Create an image and activate EFI in the motherboard settings.</p>
+<p>
+
+<div style="text-align: center"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="images/image.png"
+        data-srcset="images/image.png, images/image.png 1.5x, images/image.png 1.6x"
+        data-sizes="auto"
+        alt="images/image.png"
+        title="image.png" /></div></p>
+<p>Start the virtual machine and follow the instructions.</p>
+<p>The following instructions assume Portugal as the target locale.</p>
+<p>Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:</p>
+<p>loadkeys pt-latin1
+ip link
+ping archlinux.org
+timedatectl set-ntp true</p>
+<p>Next, create the partitions using fdisk:</p>
+<p>fdisk -l
+fdisk /dev/sda
+n
+default
+default
+default
++512M
+t
+L (check for EFI)
+ef
+n
+default
+default
+default
++1024M
+t
+default
+L
+82 (check for linux swap)
+n
+default
+default
+default
+default
+w</p>
+<p>After the partition creation:</p>
+<p>mkfs.fat -F32 /dev/sda1
+mkswap /dev/sda2
+swapon /dev/sda2
+mkfs.ext4 /dev/sda3
+mount /dev/sda3 /mnt
+pacstrap /mnt base linux linux-firmware vim
+genfstab -U /mnt &raquo; /mnt/etc/fstab</p>
+<p>With the base setup done, let&rsquo;s set up the locale:</p>
+<p>arch-chroot /mnt
+ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
+hwclock &ndash;systohc
+vi /etc/locale.gen</p>
+<h1 id="uncomment-pt_pt-and-en_gb-ones">uncomment pt_PT and en_GB ones</h1>
+<p>:x
+locale-gen</p>
+<p>Now set the network:</p>
+<p>vi /etc/hostname
+arch5 (the name you want)
+:x
+vi /etc/hosts
+127.0.0.1	localhost
+::1		localhost
+127.0.0.1	arch5.localdomain	arch5
+:x
+pacman -S networkmanager gnome-keyring
+systemctl enable NetworkManager.service</p>
+<p>Change the root password:</p>
+<p>passwd</p>
+<p>And configure the bootloader:</p>
+<p>pacman -S grub efibootmgr
+mkdir /boot/efi
+mount /dev/sda1 /boot/efi
+grub-install &ndash;target=x86_64-efi &ndash;bootloader-id=GRUB &ndash;efi-directory=/boot/efi
+grub-mkconfig -o /boot/grub/grub.cfg</p>
+<p>To finish installing the desktop environment:</p>
+<p>pacman -S xorg
+pacman -S gnome-shell nautilus gnome-terminal guake gnome-tweak-tool gnome-control-center xdg-user-dirs gdm
+systemctl enable gdm.service
+exit
+reboot</p>
+<p>The network was not working properly in one of the trials.</p>
+<p>vi /etc/systemd/network/20-wired.network
+[Match]
+Name=enp0s3 (name of the network here)</p>
+<p>[Network]
+DHCP=yes
+:x
+systemctl restart systemd-networkd.service
+ping google.com</p>
+</div>
+
+            <div class="post"><div class="post-info-share">
+    <span></span>
+</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
+            <a class="nav-box" href="/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">How to install Elixir on Linux Mint 20</span></div></a>
+        </div></div></div>
+</div>
+        </div>
+    <div id="toc-final"></div>
+    </article></div></main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://renato0307.github.io&utm_medium=footer&utm_campaign=config&utm_term=1.2.0" target="_blank" title="uBlogger 1.2.0"><i class="fas fa-pencil-alt fa-fw"></i> uBlogger</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script></body>
+</html>

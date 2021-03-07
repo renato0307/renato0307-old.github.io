@@ -1,0 +1,105 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>english - Category - renato alves torres . net</title>
+        <link>https://renato0307.github.io/categories/english/</link>
+        <description>english - Category - renato alves torres . net</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/categories/english/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch Linux Installation Commands</title>
+    <link>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</link>
+    <pubDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</guid>
+    <description><![CDATA[I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
+I&rsquo;ll do that by doing an installation using VirtualBox.
+It took me eight attempts to stabilize the script below.
+Download ISO, e.g., from https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01.
+Create an image and activate EFI in the motherboard settings.
+ 
+Start the virtual machine and follow the instructions.
+The following instructions assume Portugal as the target locale.
+Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:]]></description>
+</item><item>
+    <title>How to install Elixir on Linux Mint 20</title>
+    <link>https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/</link>
+    <pubDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/</guid>
+    <description><![CDATA[Since last weekend I&rsquo;m using Linux Mint 20 instead of Windows 10. Today, I tried to install Elixir using the Ubuntu instructions using apt get, without success.
+So I went with the package approach:
+ Direct download from Erlang Solutions (link) Installation of the deb files using the software manager  In details, download Erlang and Elixir for Ubuntu Focal (20.04) which is the version used by Linux Mint 20.]]></description>
+</item><item>
+    <title>Improving &#34;slow internet&#34;</title>
+    <link>https://renato0307.github.io/posts/2020-12-18-improving-slow-internet/</link>
+    <pubDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-12-18-improving-slow-internet/</guid>
+    <description><![CDATA[I’ve just moved to Linux Mint 20 from Windows 10, as mentioned before.
+One of the things I felt was worse was the time internet pages were taking to load or “establishing connection…”.
+It is a very strange problem and hard for me to debug.
+Found a YouTube video explaining how to use OpenDNS to improve internet connection, so I decided to give it a try.
+The steps are:
+ Go to opendns.]]></description>
+</item><item>
+    <title>Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling</title>
+    <link>https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/</link>
+    <pubDate>Tue, 15 May 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+After having Hyperledger Fabric and Hyperledger Composer up and running, we&rsquo;re interested in the integration with OutSystems, more specifically with Business Processes running in OutSystems.
+Blockchain is going to be critical for the processes in the future, not only because it can bring big gains in efficiency with the simplification of the business networks (removing mans in the middle, for example). It will create the ability to track each step of common processes used by the ecosystem, so that parties can understand and track how data flows.]]></description>
+</item><item>
+    <title>Blockchain, OutSystems and BPM, Part 1: Installing Hyperledger</title>
+    <link>https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/</link>
+    <pubDate>Wed, 09 May 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-05-09-blockchain-outsystems-and-business-processes-part-1-installing-hyperledger/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+I&rsquo;ve been exploring how to combine Blockchain, OutSystems and Business Processes.
+Our goal is not focus on Blockchain technology only. We aim to understand what solutions we can build, the impacts in terms of business processes and how can we leverage OutSystems strengths to deliver the benefits faster.
+For that, we&rsquo;ll be using Hyperledger Fabric and Hyperledger Composer.
+Hyperledger Fabric is a permissioned distributed ledger technology platform, designed for use in enterprise contexts.]]></description>
+</item><item>
+    <title>Bootstrapping an OutSystems Distributed Team with SCRUM</title>
+    <link>https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/</link>
+    <pubDate>Sun, 18 Mar 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+ “Embrace the unknown! That’s where learning lies! If you’re too afraid to learn, you will never get any better. This is the key to being successful at Scrum: embrace change.” ― Jeff Sutherland, The Power of Scrum
+ Its been 23 years since the presentation of the Scrum framework by Jeff Sutherland and Ken Schwaber at the OOPSLA &lsquo;95, and almost 20 years since the creation of the Agile Manifesto.]]></description>
+</item><item>
+    <title>Learning from the OutSystems Forum Series</title>
+    <link>https://renato0307.github.io/posts/2018-02-03-learning-from-the-outsystems-forum-series/</link>
+    <pubDate>Sat, 03 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-02-03-learning-from-the-outsystems-forum-series/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+I started to learn how to program computers when I was 15 years old, with good old Pascal at secondary school. With a bachelor and master degrees in Computer Science and 18 years of professional experience, at 38, about one month ago, I&rsquo;ve quitted my solid and stable job to dedicate myself to a new professional challenge along two big axis: Business Process Management (BPM) solutions and OutSystems.]]></description>
+</item><item>
+    <title>My First Firefox Extension - Screen Text Obfuscation</title>
+    <link>https://renato0307.github.io/posts/2018-01-24-my-first-firefox-extension-screen-text-obfuscation/</link>
+    <pubDate>Wed, 24 Jan 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-01-24-my-first-firefox-extension-screen-text-obfuscation/</guid>
+    <description><![CDATA[https://developer.mozilla.org/en-US/Add-ons/WebExtensions Color no github Publicar nos add-ons da mozilla Ver https://github.com/marak/Faker.js/]]></description>
+</item><item>
+    <title>OutSystems Architecture and Colored Module Icons</title>
+    <link>https://renato0307.github.io/posts/2018-01-24-outsystems-architecture-and-the-colored-module-icons/</link>
+    <pubDate>Wed, 24 Jan 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-01-24-outsystems-architecture-and-the-colored-module-icons/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+ Mere color, unspoiled by meaning, and unallied with definite form, can speak to the soul in a thousand different ways. &ndash;Oscar Wilde
+ After 600 hours of OutSystems online training and the Associate Developer Certification, it was time to do some real work.
+My first OutSystems project consisted of a 300 Application Objects solution around Business Processes, with relatively different challenges:
+ Plain Old CRUDs Several types of users, with different sets of functionalities Integration with Elasticsearch and other cloud available services BPTs for business and technical needs Jobs / Timers .]]></description>
+</item><item>
+    <title>Introduction to ElasticSearch</title>
+    <link>https://renato0307.github.io/posts/2017-12-30-introduction-to-elasticsearch/</link>
+    <pubDate>Sat, 30 Dec 2017 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2017-12-30-introduction-to-elasticsearch/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>linux - Tag - renato alves torres . net</title>
+        <link>https://renato0307.github.io/tags/linux/</link>
+        <description>linux - Tag - renato alves torres . net</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Improving &#34;slow internet&#34;</title>
+    <link>https://renato0307.github.io/posts/2020-12-18-improving-slow-internet/</link>
+    <pubDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2020-12-18-improving-slow-internet/</guid>
+    <description><![CDATA[I’ve just moved to Linux Mint 20 from Windows 10, as mentioned before.
+One of the things I felt was worse was the time internet pages were taking to load or “establishing connection…”.
+It is a very strange problem and hard for me to debug.
+Found a YouTube video explaining how to use OpenDNS to improve internet connection, so I decided to give it a try.
+The steps are:
+ Go to opendns.]]></description>
+</item></channel>
+</rss>

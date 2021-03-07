@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>outsystems - Tag - renato alves torres . net</title>
+        <link>https://renato0307.github.io/tags/outsystems/</link>
+        <description>outsystems - Tag - renato alves torres . net</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 03 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/tags/outsystems/" rel="self" type="application/rss+xml" /><item>
+    <title>Learning from the OutSystems Forum Series</title>
+    <link>https://renato0307.github.io/posts/2018-02-03-learning-from-the-outsystems-forum-series/</link>
+    <pubDate>Sat, 03 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-02-03-learning-from-the-outsystems-forum-series/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+I started to learn how to program computers when I was 15 years old, with good old Pascal at secondary school. With a bachelor and master degrees in Computer Science and 18 years of professional experience, at 38, about one month ago, I&rsquo;ve quitted my solid and stable job to dedicate myself to a new professional challenge along two big axis: Business Process Management (BPM) solutions and OutSystems.]]></description>
+</item><item>
+    <title>OutSystems Architecture and Colored Module Icons</title>
+    <link>https://renato0307.github.io/posts/2018-01-24-outsystems-architecture-and-the-colored-module-icons/</link>
+    <pubDate>Wed, 24 Jan 2018 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2018-01-24-outsystems-architecture-and-the-colored-module-icons/</guid>
+    <description><![CDATA[Reading time: [rt_reading_time] minutes.
+ Mere color, unspoiled by meaning, and unallied with definite form, can speak to the soul in a thousand different ways. &ndash;Oscar Wilde
+ After 600 hours of OutSystems online training and the Associate Developer Certification, it was time to do some real work.
+My first OutSystems project consisted of a 300 Application Objects solution around Business Processes, with relatively different challenges:
+ Plain Old CRUDs Several types of users, with different sets of functionalities Integration with Elasticsearch and other cloud available services BPTs for business and technical needs Jobs / Timers .]]></description>
+</item></channel>
+</rss>
