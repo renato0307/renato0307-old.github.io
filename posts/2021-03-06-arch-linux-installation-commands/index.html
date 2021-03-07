@@ -42,7 +42,7 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/"
-        },"genre": "posts","wordCount":  290 ,
+        },"genre": "posts","wordCount":  280 ,
         "url": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/","datePublished": "2021-03-06T00:00:00+00:00","dateModified": "2021-03-06T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Author"},"author": {
@@ -112,7 +112,7 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
             <h1 class="single-title animated flipInX">Arch Linux Installation Commands</h1><div class="post-meta">
                 <div class="post-meta-line"><span class="post-category">
                                 <a href="/categories/english/"><i class="far fa-folder fa-fw"></i>&nbsp;english</a>&nbsp;<a href="/categories/software/"><i class="far fa-folder fa-fw"></i>&nbsp;software</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-03-06">2021-03-06</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;290 words
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-03-06">2021-03-06</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;280 words
                     &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;2 minutes</div>
             </div>
         </div>
@@ -150,12 +150,13 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
 <p>Start the virtual machine and follow the instructions.</p>
 <p>The following instructions assume Portugal as the target locale.</p>
 <p>Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:</p>
-<p>loadkeys pt-latin1
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">loadkeys pt-latin1
 ip link
 ping archlinux.org
-timedatectl set-ntp true</p>
-<p>Next, create the partitions using fdisk:</p>
-<p>fdisk -l
+timedatectl set-ntp <span class="nb">true</span>
+</code></pre></div><p>Next, create the partitions using fdisk.</p>
+<p>The first one is for EFI:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">fdisk -l
 fdisk /dev/sda
 n
 default
@@ -163,9 +164,10 @@ default
 default
 +512M
 t
-L (check for EFI)
+L <span class="o">(</span>check <span class="k">for</span> EFI<span class="o">)</span>
 ef
-n
+</code></pre></div><p>The second for swap:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">n
 default
 default
 default
@@ -173,32 +175,33 @@ default
 t
 default
 L
-82 (check for linux swap)
-n
+<span class="m">82</span> <span class="o">(</span>check <span class="k">for</span> linux swap<span class="o">)</span>
+</code></pre></div><p>The third for data/software:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">n
 default
 default
 default
 default
-w</p>
-<p>After the partition creation:</p>
-<p>mkfs.fat -F32 /dev/sda1
+w
+</code></pre></div><p>After the partition creation:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkfs.fat -F32 /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
 mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
 pacstrap /mnt base linux linux-firmware vim
-genfstab -U /mnt &raquo; /mnt/etc/fstab</p>
-<p>With the base setup done, let&rsquo;s set up the locale:</p>
-<p>arch-chroot /mnt
+genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre></div><p>With the base setup done, let&rsquo;s set up the locale:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
-hwclock &ndash;systohc
-vi /etc/locale.gen</p>
-<h1 id="uncomment-pt_pt-and-en_gb-ones">uncomment pt_PT and en_GB ones</h1>
-<p>:x
-locale-gen</p>
-<p>Now set the network:</p>
-<p>vi /etc/hostname
-arch5 (the name you want)
+hwclock --systohc
+vi /etc/locale.gen
+<span class="c1"># uncomment pt_PT and en_GB ones</span>
+:x
+locale-gen
+</code></pre></div><p>Now set the network:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vi /etc/hostname
+arch5 <span class="o">(</span>the name you want<span class="o">)</span>
 :x
 vi /etc/hosts
 127.0.0.1	localhost
@@ -206,31 +209,23 @@ vi /etc/hosts
 127.0.0.1	arch5.localdomain	arch5
 :x
 pacman -S networkmanager gnome-keyring
-systemctl enable NetworkManager.service</p>
-<p>Change the root password:</p>
-<p>passwd</p>
-<p>And configure the bootloader:</p>
-<p>pacman -S grub efibootmgr
+systemctl <span class="nb">enable</span> NetworkManager.service 
+</code></pre></div><p>Change the root password:</p>
+<pre><code>passwd
+</code></pre><p>And configure the bootloader:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S grub efibootmgr
 mkdir /boot/efi
 mount /dev/sda1 /boot/efi
-grub-install &ndash;target=x86_64-efi &ndash;bootloader-id=GRUB &ndash;efi-directory=/boot/efi
-grub-mkconfig -o /boot/grub/grub.cfg</p>
-<p>To finish installing the desktop environment:</p>
-<p>pacman -S xorg
+grub-install --target<span class="o">=</span>x86<span class="se">\_</span>64-efi --bootloader-id<span class="o">=</span>GRUB --efi-directory<span class="o">=</span>/boot/efi
+grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre></div><p>To finish, install the desktop environment:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S xorg 
 pacman -S gnome-shell nautilus gnome-terminal guake gnome-tweak-tool gnome-control-center xdg-user-dirs gdm
-systemctl enable gdm.service
-exit
-reboot</p>
-<p>The network was not working properly in one of the trials.</p>
-<p>vi /etc/systemd/network/20-wired.network
-[Match]
-Name=enp0s3 (name of the network here)</p>
-<p>[Network]
-DHCP=yes
-:x
-systemctl restart systemd-networkd.service
-ping google.com</p>
-</div>
+systemctl <span class="nb">enable</span> gdm.service
+</code></pre></div><p>Finish by rebooting</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
+reboot
+</code></pre></div></div>
 
             <div class="post"><div class="post-info-share">
     <span></span>
