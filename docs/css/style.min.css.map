@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/home/renato/Projects/personal/renato0307.github.io.src",
+	"sourceRoot": "/home/renato/Projects/personal/renato0307.github.io",
 	"sources": [
 		"themes/uBlogger/assets/css/style.scss",
 		"themes/uBlogger/assets/css/_variables.scss",
