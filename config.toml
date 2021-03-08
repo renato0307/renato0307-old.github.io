@@ -48,6 +48,14 @@ theme = "uBlogger"
     url = "/uncopyright"
     title = ""
     weight = 4
+  [[menu.main]]
+    identifier = "privacy"
+    pre = ""
+    post = ""
+    name = "Privacy"
+    url = "/privacy"
+    title = ""
+    weight = 5
 
 # Markup related configuration in Hugo
 [markup]
