@@ -104,12 +104,12 @@ Now set the network:
 
 ```bash
 vi /etc/hostname
-arch5 (the name you want)
+arch8 # the name you want
 :x
 vi /etc/hosts
 127.0.0.1	localhost
 ::1		localhost
-127.0.0.1	arch5.localdomain	arch5
+127.0.0.1	arch8.localdomain	arch8 # the name you want
 :x
 pacman -S networkmanager gnome-keyring
 systemctl enable NetworkManager.service 

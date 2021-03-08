@@ -40,7 +40,7 @@ Start the virtual machine and follow the steps below."/>
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/"
-        },"genre": "posts","keywords": "arch linux","wordCount":  296 ,
+        },"genre": "posts","keywords": "arch linux","wordCount":  302 ,
         "url": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/","datePublished": "2021-03-06T00:00:00+00:00","dateModified": "2021-03-06T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Author"},"author": {
@@ -110,7 +110,7 @@ Start the virtual machine and follow the steps below."/>
             <h1 class="single-title animated flipInX">Arch Linux Installation Commands</h1><div class="post-meta">
                 <div class="post-meta-line"><span class="post-category">
                                 <a href="/categories/english/"><i class="far fa-folder fa-fw"></i>&nbsp;english</a>&nbsp;<a href="/categories/software/"><i class="far fa-folder fa-fw"></i>&nbsp;software</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-03-06">2021-03-06</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;296 words
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-03-06">2021-03-06</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;302 words
                     &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;2 minutes</div>
             </div>
         </div>
@@ -199,12 +199,12 @@ vi /etc/locale.gen <span class="c1"># uncomment pt_PT and en_GB ones</span>
 locale-gen
 </code></pre></div><p>Now set the network:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vi /etc/hostname
-arch5 <span class="o">(</span>the name you want<span class="o">)</span>
+arch8 <span class="c1"># the name you want</span>
 :x
 vi /etc/hosts
 127.0.0.1	localhost
 ::1		localhost
-127.0.0.1	arch5.localdomain	arch5
+127.0.0.1	arch8.localdomain	arch8 <span class="c1"># the name you want</span>
 :x
 pacman -S networkmanager gnome-keyring
 systemctl <span class="nb">enable</span> NetworkManager.service 
