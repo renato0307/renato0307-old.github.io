@@ -8,12 +8,11 @@
 <meta property="og:description" content="I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
 I&rsquo;ll do that by doing an installation using VirtualBox.
 It took me eight attempts to stabilize the script below.
-Download ISO, e.g., from https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01.
-Create an image and activate EFI in the motherboard settings.
+Start by downloading ISO, e.g., from this mirror in Portugal.
+Next open VirtualBox and create a new machine using the image.
+Before starting the machine, activate EFI in the motherboard settings:
  
-Start the virtual machine and follow the instructions.
-The following instructions assume Portugal as the target locale.
-Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:" />
+Start the virtual machine and follow the steps below." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-03-06T00:00:00&#43;00:00" />
@@ -24,12 +23,11 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
 <meta name="twitter:description" content="I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
 I&rsquo;ll do that by doing an installation using VirtualBox.
 It took me eight attempts to stabilize the script below.
-Download ISO, e.g., from https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01.
-Create an image and activate EFI in the motherboard settings.
+Start by downloading ISO, e.g., from this mirror in Portugal.
+Next open VirtualBox and create a new machine using the image.
+Before starting the machine, activate EFI in the motherboard settings:
  
-Start the virtual machine and follow the instructions.
-The following instructions assume Portugal as the target locale.
-Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:"/>
+Start the virtual machine and follow the steps below."/>
 <meta name="application-name" content="renato alves torres . net">
 <meta name="apple-mobile-web-app-title" content="renato alves torres . net"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -42,7 +40,7 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/"
-        },"genre": "posts","wordCount":  288 ,
+        },"genre": "posts","keywords": "arch linux","wordCount":  296 ,
         "url": "https:\/\/renato0307.github.io\/posts\/2021-03-06-arch-linux-installation-commands\/","datePublished": "2021-03-06T00:00:00+00:00","dateModified": "2021-03-06T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Author"},"author": {
@@ -112,7 +110,7 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
             <h1 class="single-title animated flipInX">Arch Linux Installation Commands</h1><div class="post-meta">
                 <div class="post-meta-line"><span class="post-category">
                                 <a href="/categories/english/"><i class="far fa-folder fa-fw"></i>&nbsp;english</a>&nbsp;<a href="/categories/software/"><i class="far fa-folder fa-fw"></i>&nbsp;software</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-03-06">2021-03-06</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;288 words
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-03-06">2021-03-06</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;296 words
                     &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;2 minutes</div>
             </div>
         </div>
@@ -135,8 +133,10 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
             </div><p>I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.</p>
 <p>I&rsquo;ll do that by doing an installation using VirtualBox.</p>
 <p>It took me eight attempts to stabilize the script below.</p>
-<p>Download ISO, e.g., from <a href="https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01" target="_blank" rel="noopener noreffer">https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01</a>.</p>
-<p>Create an image and activate EFI in the motherboard settings.</p>
+<p>Start by downloading ISO, e.g., from <a href="https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01" target="_blank" rel="noopener noreffer">this mirror in Portugal</a>.</p>
+<p>Next open VirtualBox and create a new machine using the image.</p>
+<p>Before starting the machine, activate <a href="https://en.wikipedia.org/wiki/EFI_system_partition" target="_blank" rel="noopener noreffer">EFI</a>
+in the motherboard settings:</p>
 <p>
 
 <div style="text-align: center"><img
@@ -147,8 +147,7 @@ Activate the Portuguese keyboard layout, check if networking is working, and upd
         data-sizes="auto"
         alt="/posts/2021-03-06-arch-linux-installation-commands/images/image.png"
         title="image.png" /></div></p>
-<p>Start the virtual machine and follow the instructions.</p>
-<p>The following instructions assume Portugal as the target locale.</p>
+<p>Start the virtual machine and follow the steps below.</p>
 <p>Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">loadkeys pt-latin1
 ip link
@@ -174,8 +173,8 @@ default
 +1024M
 t
 default
-L
-<span class="m">82</span> <span class="c1"># check for Linux swap</span>
+L <span class="c1"># check for Linux swap</span>
+<span class="m">82</span>
 </code></pre></div><p>The third for data/software:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">n
 default
@@ -215,7 +214,7 @@ systemctl <span class="nb">enable</span> NetworkManager.service
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S grub efibootmgr
 mkdir /boot/efi
 mount /dev/sda1 /boot/efi
-grub-install --target<span class="o">=</span>x86<span class="se">\_</span>64-efi --bootloader-id<span class="o">=</span>GRUB --efi-directory<span class="o">=</span>/boot/efi
+grub-install --target<span class="o">=</span>x86_64-efi --bootloader-id<span class="o">=</span>GRUB --efi-directory<span class="o">=</span>/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre></div><p>To finish, install the desktop environment, with the bare minimum applications:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S xorg 
@@ -235,7 +234,7 @@ reboot
 </div>
         </div>
     <div id="toc-final"></div>
-    </article></div></main><footer class="footer">
+    </article><div class=" post-tags post-tags-toc "><a href="/tags/arch-linux/" class="tag">arch linux</a></div></div></main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://renato0307.github.io&utm_medium=footer&utm_campaign=config&utm_term=1.2.0" target="_blank" title="uBlogger 1.2.0"><i class="fas fa-pencil-alt fa-fw"></i> uBlogger</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
         </div>

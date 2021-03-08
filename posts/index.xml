@@ -12,12 +12,11 @@
     <description><![CDATA[I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
 I&rsquo;ll do that by doing an installation using VirtualBox.
 It took me eight attempts to stabilize the script below.
-Download ISO, e.g., from https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/iso/2021.03.01.
-Create an image and activate EFI in the motherboard settings.
+Start by downloading ISO, e.g., from this mirror in Portugal.
+Next open VirtualBox and create a new machine using the image.
+Before starting the machine, activate EFI in the motherboard settings:
  
-Start the virtual machine and follow the instructions.
-The following instructions assume Portugal as the target locale.
-Activate the Portuguese keyboard layout, check if networking is working, and update the system clock:]]></description>
+Start the virtual machine and follow the steps below.]]></description>
 </item><item>
     <title>How to install Elixir on Linux Mint 20</title>
     <link>https://renato0307.github.io/posts/2020-12-18-how-to-install-elixir-on-linux-mint-20/</link>

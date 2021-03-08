@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>arch linux - Tag - renato alves torres . net</title>
+        <link>https://renato0307.github.io/tags/arch-linux/</link>
+        <description>arch linux - Tag - renato alves torres . net</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/tags/arch-linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch Linux Installation Commands</title>
+    <link>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</link>
+    <pubDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</guid>
+    <description><![CDATA[I&rsquo;m learning about Arch Linux so I can install it on a custom build desktop.
+I&rsquo;ll do that by doing an installation using VirtualBox.
+It took me eight attempts to stabilize the script below.
+Start by downloading ISO, e.g., from this mirror in Portugal.
+Next open VirtualBox and create a new machine using the image.
+Before starting the machine, activate EFI in the motherboard settings:
+ 
+Start the virtual machine and follow the steps below.]]></description>
+</item></channel>
+</rss>
