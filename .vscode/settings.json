@@ -1,7 +1,9 @@
 {
-    "files.exclude": {
-      "**/201*": true,
-      "**/200*": true,
-      "**/2020*": true,
-    }
-  }
+  "files.exclude": {
+    "**/201*": true,
+    "**/200*": true,
+    "**/2020*": true,
+  },
+  "editor.formatOnSave": true,
+  "prettier.proseWrap": "always"
+}

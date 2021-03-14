@@ -7,6 +7,7 @@ title = "renato alves torres . net"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "uBlogger"
+enableEmoji = true
 
 [params]
   # uBlogger theme version
