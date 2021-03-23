@@ -9,10 +9,9 @@
 After having Hyperledger Fabric and Hyperledger Composer up and running, we&rsquo;re interested in the integration with OutSystems, more specifically with Business Processes running in OutSystems.
 Blockchain is going to be critical for the processes in the future, not only because it can bring big gains in efficiency with the simplification of the business networks (removing mans in the middle, for example). It will create the ability to track each step of common processes used by the ecosystem, so that parties can understand and track how data flows." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-05-15T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2018-05-15T00:00:00&#43;00:00" />
-
+<meta property="og:url" content="https://renato0307.github.io/posts/2018-05-15-blockchain-outsystems-and-bpm-part-2-business-network-event-handling/" />
+<meta property="article:published_time" content="2018-05-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-05-15T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Blockchain, OutSystems and BPM, Part 2: Business Network Event Handling"/>
 <meta name="twitter:description" content="Reading time: [rt_reading_time] minutes.
@@ -153,7 +152,7 @@ Blockchain is going to be critical for the processes in the future, not only bec
 <p>For our prototype we will be using a NodeJS standalone application that subscribes to events using web sockets. On a message received, it calls an OutSystems REST API for event handling.</p>
 <p>We named this component <strong>Blockchain Event Agent</strong>.</p>
 <p>A code sample to achieve this is:</p>
-<p>[cc lang=&ldquo;javascript&rdquo;] const WebSocket = require(&lsquo;ws&rsquo;); const ws = new WebSocket(&lsquo;ws://35.229.89.113:3000&rsquo;);</p>
+<p>[cc lang=&quot;javascript&rdquo;] const WebSocket = require(&lsquo;ws&rsquo;); const ws = new WebSocket(&lsquo;ws://35.229.89.113:3000&rsquo;);</p>
 <p>ws.on(&lsquo;message&rsquo;, function incoming(data) { console.log(data); // Call OutSystems REST API HERE }) [/cc]</p>
 <p> </p>
 <p>The solution to process the events received by the OutSystems REST API must:</p>
@@ -199,7 +198,7 @@ Blockchain is going to be critical for the processes in the future, not only bec
         </div>
     <div id="toc-final"></div>
     </article></div></main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://renato0307.github.io&utm_medium=footer&utm_campaign=config&utm_term=1.2.0" target="_blank" title="uBlogger 1.2.0"><i class="fas fa-pencil-alt fa-fw"></i> uBlogger</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://renato0307.github.io&utm_medium=footer&utm_campaign=config&utm_term=1.2.0" target="_blank" title="uBlogger 1.2.0"><i class="fas fa-pencil-alt fa-fw"></i> uBlogger</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
         </div>
     </footer></div>

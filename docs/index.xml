@@ -6,6 +6,17 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 Dec 2017 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://renato0307.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Primal Blueprint Fitness Self-assessment</title>
+    <link>https://renato0307.github.io/posts/2021-03-23-pbf-benchmark/</link>
+    <pubDate>Sat, 13 Mar 2021 07:23:15 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2021-03-23-pbf-benchmark/</guid>
+    <description><![CDATA[I need a straightforward bodyweight training program for general physical condition improvement and maintenance.
+As I cannot find or remember something as simple as the Primal Blueprint Fitness I&rsquo;ll go for it.
+The program starts with the self-assessment to know the progression level I&rsquo;m on.
+My results are:
+ Pushup: 12 reps Pullup: 3 reps Squat: 65 reps Plank: 64 seconds  In terms of progressions, this means my starting point is:]]></description>
+</item><item>
     <title>Arch Linux Installation Commands</title>
     <link>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</link>
     <pubDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</pubDate>
@@ -102,14 +113,5 @@ I&rsquo;ve been exploring how to combine Blockchain, OutSystems and Business P
 Our goal is not focus on Blockchain technology only. We aim to understand what solutions we can build, the impacts in terms of business processes and how can we leverage OutSystems strengths to deliver the benefits faster.
 For that, we&rsquo;ll be using Hyperledger Fabric and Hyperledger Composer.
 Hyperledger Fabric is a permissioned distributed ledger technology platform, designed for use in enterprise contexts.]]></description>
-</item><item>
-    <title>Bootstrapping an OutSystems Distributed Team with SCRUM</title>
-    <link>https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/</link>
-    <pubDate>Sun, 18 Mar 2018 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://renato0307.github.io/posts/2018-03-18-bootstrapping-an-outsystems-distributed-team-with-scrum/</guid>
-    <description><![CDATA[Reading time: [rt_reading_time] minutes.
- “Embrace the unknown! That’s where learning lies! If you’re too afraid to learn, you will never get any better. This is the key to being successful at Scrum: embrace change.” ― Jeff Sutherland, The Power of Scrum
- Its been 23 years since the presentation of the Scrum framework by Jeff Sutherland and Ken Schwaber at the OOPSLA &lsquo;95, and almost 20 years since the creation of the Agile Manifesto.]]></description>
 </item></channel>
 </rss>
