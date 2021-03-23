@@ -3,7 +3,18 @@
         <title>english - Category - renato alves torres . net</title>
         <link>https://renato0307.github.io/categories/english/</link>
         <description>english - Category - renato alves torres . net</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/categories/english/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 13 Mar 2021 07:23:15 &#43;0000</lastBuildDate><atom:link href="https://renato0307.github.io/categories/english/" rel="self" type="application/rss+xml" /><item>
+    <title>Primal Blueprint Fitness Self-assessment</title>
+    <link>https://renato0307.github.io/posts/2021-03-23-pbf-benchmark/</link>
+    <pubDate>Sat, 13 Mar 2021 07:23:15 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://renato0307.github.io/posts/2021-03-23-pbf-benchmark/</guid>
+    <description><![CDATA[I need a straightforward bodyweight training program for general physical condition improvement and maintenance.
+As I cannot find or remember something as simple as the Primal Blueprint Fitness I&rsquo;ll go for it.
+The program starts with the self-assessment to know the progression level I&rsquo;m on.
+My results are:
+ Pushup: 12 reps Pullup: 3 reps Squat: 65 reps Plank: 64 seconds  In terms of progressions, this means my starting point is:]]></description>
+</item><item>
     <title>Arch Linux Installation Commands</title>
     <link>https://renato0307.github.io/posts/2021-03-06-arch-linux-installation-commands/</link>
     <pubDate>Sat, 06 Mar 2021 00:00:00 &#43;0000</pubDate>
@@ -93,12 +104,5 @@ I started to learn how to program computers when I was 15 years old, with good o
  After 600 hours of OutSystems online training and the Associate Developer Certification, it was time to do some real work.
 My first OutSystems project consisted of a 300 Application Objects solution around Business Processes, with relatively different challenges:
  Plain Old CRUDs Several types of users, with different sets of functionalities Integration with Elasticsearch and other cloud available services BPTs for business and technical needs Jobs / Timers .]]></description>
-</item><item>
-    <title>Introduction to ElasticSearch</title>
-    <link>https://renato0307.github.io/posts/2017-12-30-introduction-to-elasticsearch/</link>
-    <pubDate>Sat, 30 Dec 2017 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://renato0307.github.io/posts/2017-12-30-introduction-to-elasticsearch/</guid>
-    <description><![CDATA[]]></description>
 </item></channel>
 </rss>

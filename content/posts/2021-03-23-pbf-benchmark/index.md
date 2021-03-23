@@ -2,6 +2,11 @@
 title: "Primal Blueprint Fitness Self-assessment"
 date: 2021-03-13T07:23:15Z
 draft: false
+categories:
+  - "english"
+  - "fitness"
+tags:
+  - "pbf"
 ---
 
 I need a straightforward bodyweight training program for general physical
